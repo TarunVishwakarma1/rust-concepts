@@ -13,11 +13,6 @@ pub enum Shape{
     Square(f32),
 }
 
-enum Result{
-    Ok(String),
-    Err(String),
-}
-
 impl Shape{
     pub fn area(&self) -> f32{
         match self{
@@ -41,4 +36,13 @@ pub fn read_file(path: &str){
         Ok(content) => println!("{}", content),
         Err(e) => println!("{}", e),
     };
+}
+
+pub fn find_first_a(s: &str) -> Option<u32>{
+    for (index, c) in s.chars().enumerate(){
+        if c == 'a'{
+            return Some(index as u32);
+        }
+    }
+    None
 }

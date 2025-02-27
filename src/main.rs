@@ -7,11 +7,11 @@
 //mod borrowing_and_references;
 //mod struct_operations;
 //use struct_operations::Rect;
-mod enum_operations;
-use enum_operations::Direction;
-use enum_operations::Shape;
+// mod enum_operations;
+// use enum_operations::Direction;
+// use enum_operations::Shape;
 fn main() {
-    enum_operations();
+
 }
 
 
@@ -75,23 +75,28 @@ fn main() {
 //     println!("{}", rect.perimeter());
 // }
 
-fn enum_operations(){
-    let dir = Direction::Up;
-    match dir{
-        Direction::Up => println!("Up"),
-        Direction::Down => println!("Down"),
-        Direction::Left => println!("Left"),
-        Direction::Right => println!("Right"),
-    }
+// fn enum_operations(){
+//     let dir = Direction::Up;
+//     match dir{
+//         Direction::Up => println!("Up"),
+//         Direction::Down => println!("Down"),
+//         Direction::Left => println!("Left"),
+//         Direction::Right => println!("Right"),
+//     }
 
-    let circle = Shape::Circle(10.0);
-    let rectangle = Shape::Rectangle(10.0, 20.0);
-    let square = Shape::Square(10.0);
-    println!("{}", circle.area());
-    println!("{}", rectangle.area());
-    println!("{}", square.area());
-    println!("{}", circle.perimeter());
-    println!("{}", rectangle.perimeter());
-    println!("{}", square.perimeter());
-    enum_operations::read_file("example.txt");
-}
+//     let circle = Shape::Circle(10.0);
+//     let rectangle = Shape::Rectangle(10.0, 20.0);
+//     let square = Shape::Square(10.0);
+//     println!("{}", circle.area());
+//     println!("{}", rectangle.area());
+//     println!("{}", square.area());
+//     println!("{}", circle.perimeter());
+//     println!("{}", rectangle.perimeter());
+//     println!("{}", square.perimeter());
+//     enum_operations::read_file("example.txt");
+//     let index = enum_operations::find_first_a("hello world");
+//     match index{
+//         Some(index) => println!("{}", index),
+//         None => println!("Not found"),
+//     }
+// }
