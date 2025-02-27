@@ -4,9 +4,13 @@
 //mod arrays_operations;
 //mod looping_operations;
 //mod ownership_of_heap_variables;
-mod borrowing_and_references;
+//mod borrowing_and_references;
+//mod struct_operations;
+//use struct_operations::Rect;
+//mod enum_operations;
+//use enum_operations::Direction;
 fn main() {
-    borrowing_and_references();
+    
 }
 
 
@@ -57,7 +61,25 @@ fn main() {
 //     ownership_of_heap_variables::chnage_in_mutable_string();
 // }
 
-fn borrowing_and_references(){
-    borrowing_and_references::ownership();
-    borrowing_and_references::borrowing();
-}
+// fn borrowing_and_references(){
+//     borrowing_and_references::ownership();
+//     borrowing_and_references::borrowing();
+// }
+
+// fn struct_operations(){
+//     let rect = Rect{height: 10.0, width: 20.0};
+//     println!("{}", rect.height);
+//     println!("{}", rect.width);
+//     println!("{}", rect.area());
+//     println!("{}", rect.perimeter());
+// }
+
+// fn enum_operations(){
+//     let dir = Direction::Up;
+//     match dir{
+//         Direction::Up => println!("Up"),
+//         Direction::Down => println!("Down"),
+//         Direction::Left => println!("Left"),
+//         Direction::Right => println!("Right"),
+//     }
+// }
