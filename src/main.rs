@@ -90,4 +90,8 @@ fn enum_operations(){
     println!("{}", circle.area());
     println!("{}", rectangle.area());
     println!("{}", square.area());
+    println!("{}", circle.perimeter());
+    println!("{}", rectangle.perimeter());
+    println!("{}", square.perimeter());
+    enum_operations::read_file("example.txt");
 }

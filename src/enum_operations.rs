@@ -1,3 +1,4 @@
+use std::fs;
 #[derive(Debug)]
 pub enum Direction{
     Up,
@@ -12,6 +13,11 @@ pub enum Shape{
     Square(f32),
 }
 
+enum Result{
+    Ok(String),
+    Err(String),
+}
+
 impl Shape{
     pub fn area(&self) -> f32{
         match self{
@@ -20,4 +26,19 @@ impl Shape{
             Shape::Square(side) => side * side,
         }
     }
+    pub fn perimeter(&self) -> f32{
+        match self{
+            Shape::Circle(radius) => 2.0 * radius * 3.14,
+            Shape::Rectangle(height, width) => 2.0 * (height + width),
+            Shape::Square(side) => 4.0 * side,
+        }
+    }
 }  
+
+pub fn read_file(path: &str){
+    let content = fs::read_to_string(path);
+    match content{
+        Ok(content) => println!("{}", content),
+        Err(e) => println!("{}", e),
+    };
+}
