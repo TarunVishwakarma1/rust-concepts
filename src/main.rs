@@ -10,8 +10,11 @@
 // mod enum_operations;
 // use enum_operations::Direction;
 // use enum_operations::Shape;
+mod generics_operations;
+use generics_operations::sum;
 fn main() {
-
+   println!("{}", sum(1, 2));
+   println!("{}", sum(1.0, 2.0));
 }
 
 
